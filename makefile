@@ -1,14 +1,13 @@
-all : list.o
-	gcc list.o
+all : list.o driver.o
+	gcc list.o driver.o
 
 f :
-	emacs driver.c &
-	emacs list.c &
+	atom driver.c
 
 run:
 	./a.out
 
-driver.o : driver.o
+driver.o :
 	gcc -c driver.c
 
 list.o : list.c list.h

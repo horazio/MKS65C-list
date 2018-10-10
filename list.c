@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include "list.h"
 
+
 void print_list(struct node * n){
-  printf("%d, ", n->i);
+  printf("[%d, ", n->i);
   if(n->next != 0){
     print_list(n->next);
   }
+  printf(" ]");
 }
 
 struct node * insert_front(struct node * n, int i){
