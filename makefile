@@ -1,4 +1,4 @@
-all : list.o driver.o
+all : driver.o list.o
 	gcc list.o driver.o
 
 f :
@@ -7,7 +7,7 @@ f :
 run:
 	./a.out
 
-driver.o :
+driver.o : driver.c
 	gcc -c driver.c
 
 list.o : list.c list.h
