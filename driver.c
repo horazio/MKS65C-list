@@ -10,11 +10,7 @@ int main(){
 
   struct node * l = NULL;
   l = insert_front(l, 10);
-  
   l = insert_front(l, 8);
-  l = insert_front(l, 3);
-  l = insert_front(l, 1);
-  l = insert_front(l, 4);
   l = insert_front(l, 356);
   l = insert_front(l, 123);
   l = insert_front(l, 4);
@@ -22,5 +18,7 @@ int main(){
   print_list(l);
   
   l = free_list(l);
+
+  print_list(l);
   return 0;
 }

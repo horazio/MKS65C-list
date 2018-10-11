@@ -3,9 +3,11 @@
 #include "list.h"
 
 void print_list_help(struct node * n){
-  printf("%d, ", n->i);
-  if(n->next != 0){
-    print_list_help(n->next);
+  if(n != 0){
+    printf("%d, ", n->i);
+    if(n->next != 0){
+      print_list_help(n->next);
+    }
   }
 }
 
@@ -28,4 +30,5 @@ struct node * free_list(struct node * n){
     free_list(n->next);
   }
   free(n);
+  return NULL;
 }
